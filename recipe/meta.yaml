@@ -6,22 +6,22 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 6e3022d900532b8d6baedfc2c70906f957cf5fa9afe04b8541e909b3db3fa459
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - setuptools_scm
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy >=1.8
     - scipy >=1.6.3
     - importlib-metadata
@@ -32,6 +32,7 @@ test:
     - inference
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
