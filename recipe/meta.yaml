@@ -1,13 +1,13 @@
 {% set name = "inference-tools" %}
-{% set version = "0.13.4" %}
+{% set version = "0.14.0" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6e3022d900532b8d6baedfc2c70906f957cf5fa9afe04b8541e909b3db3fa459
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 783484fdad34271c773fee267e534475c53a95f6c4c00bb6478e917c173b0008
 
 build:
   number: 0
