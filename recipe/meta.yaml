@@ -1,5 +1,5 @@
 {% set name = "inference-tools" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 26d225e85103d2034eec2660a664cd1feb02ff2e5f179ed4ca14d1633efb942b
+  sha256: f39f7ac0c1e99c1dd4ccca51ccbc856b408325ba63f935ec8c0680574787cde9
 
 build:
   number: 0
