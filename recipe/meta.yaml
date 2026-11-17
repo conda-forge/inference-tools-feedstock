@@ -1,5 +1,5 @@
 {% set name = "inference-tools" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 07d5ec5e1dd7346acb8fc3b7043ee33df8901708cbaf477e56bb59c19eed4bd5
+  sha256: 16878e5da20e940ac3adc23453e52643af43fb3ba343f8a2cd60d83615b68bd6
 
 build:
   number: 0
